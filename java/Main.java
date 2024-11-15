@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 
 public class Main {
     
-    private static final String SERVER_URL = "http://localhost:3000/get-locations-java";
+    private static final String SERVER_URL = "https://geolocation-inky.vercel.app/get-locations-java";
 
     public static void main(String[] args) {
         
