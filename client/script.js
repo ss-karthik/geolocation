@@ -8,7 +8,7 @@ trackButton.addEventListener("click", () => {
     tracking = !tracking;
     if (tracking) {
         trackButton.innerHTML = "Stop Tracking!";
-        const urlToPost = 'http://localhost:3000/update-location'; 
+        const urlToPost = 'https://geolocation-inky.vercel.app/update-location'; 
         trackingId = navigator.geolocation.watchPosition(
             (position) => {
                 const { latitude, longitude } = position.coords;
