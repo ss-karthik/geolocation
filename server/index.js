@@ -2,13 +2,17 @@ import express from 'express'
 import bodyParser from 'body-parser';
 import fs from 'fs/promises';
 import cors from 'cors';
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express()
 const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(bodyParser.json());
 app.set('view engine', 'ejs');
-app.set('views', './views');
+app.set('views', path.join(__dirname, './views'));
 
 const getISTTime = () => {
     const now = new Date();
