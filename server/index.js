@@ -29,7 +29,7 @@ app.post('/update-location', (req, res) => {
         longitude
     };
     
-    locationsData.push(locationEntry);
+    locationsData[0] = locationEntry;
     
     res.send('Location updated');
 });
